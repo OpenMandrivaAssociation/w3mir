@@ -1,7 +1,7 @@
 %define version 1.0.10
 %define release %mkrel 3
 
-Summary:	W3mir is a all purpose HTTP copying and mirroring tool
+Summary:	All purpose HTTP copying and mirroring tool
 Name: 		w3mir
 Version: 	%{version}
 Release: 	%{release}
