@@ -1,5 +1,5 @@
 %define version 1.0.10
-%define release %mkrel 4
+%define release %mkrel 6
 
 Summary:	All purpose HTTP copying and mirroring tool
 Name: 		w3mir
