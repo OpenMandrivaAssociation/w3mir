@@ -1,5 +1,5 @@
 %define version 1.0.10
-%define release %mkrel 8
+%define release 8
 
 Summary:	All purpose HTTP copying and mirroring tool
 Name: 		w3mir
@@ -9,8 +9,8 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Url:		http://www.cpan.org
 Source0:	http://search.cpan.org/CPAN/authors/id/J/JA/JANL/%{name}-%{version}.tar.bz2
-BuildRoot: 	%{_tmppath}/%{name}-buildroot
 BuildArch:	noarch
+buildrequires: perl-devel
 
 %description
 w3mir is a all purpose HTTP copying and mirroring tool. The main focus of w3mir
@@ -41,11 +41,7 @@ w3mir supports HTML4, and has partial support for CSS, Java and ActiveX.
 make test
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
@@ -57,4 +53,38 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/w3pdfuri.pm
 %{_mandir}/*/*
 
+
+
+
+%changelog
+* Wed Sep 09 2009 Thierry Vignaud <tvignaud@mandriva.com> 1.0.10-8mdv2010.0
++ Revision: 434696
+- rebuild
+
+* Sun Aug 03 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.0.10-7mdv2009.0
++ Revision: 261915
+- rebuild
+
+* Wed Jul 30 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.0.10-6mdv2009.0
++ Revision: 255779
+- rebuild
+
+* Mon Feb 18 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.0.10-4mdv2008.1
++ Revision: 171168
+- rebuild
+- fix "foobar is blabla" summary (=> "blabla") so that it looks nice in rpmdrake
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 1.0.10-3mdv2008.1
++ Revision: 136571
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Wed Sep 28 2005 Olivier Thauvin <nanardon@mandriva.org> 1.0.10-2mdk
+- rebuild
+
+* Wed Sep 22 2004 Stefan van der Eijk <stefan@eijk.nu> 1.0.10-1mdk
+- initial package
 
