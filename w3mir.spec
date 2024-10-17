@@ -7,7 +7,7 @@ Version: 	%{version}
 Release: 	%{release}
 License:	GPL or Artistic
 Group:		Development/Perl
-Url:		http://www.cpan.org
+Url:		https://www.cpan.org
 Source0:	http://search.cpan.org/CPAN/authors/id/J/JA/JANL/%{name}-%{version}.tar.bz2
 BuildArch:	noarch
 buildrequires: perl-devel
